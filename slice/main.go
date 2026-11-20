@@ -94,4 +94,62 @@ func main() {
 	s20 := []int{1, 2, 3, 4, 5}
 	result20, err := tasks.InsertAt(s20, 2, 99)
 	fmt.Println("task20:", result20, err)
+
+	// task21
+	s21 := []int{10, 20, 30, 40, 50}
+	values21 := []int{11, 69}
+	resule21, err := tasks.InsertMany(s21, 3, values21)
+	fmt.Println("task21:", resule21, err)
+
+	// task22
+	s22 := []int{11, 22, 33, 44, 55}
+	result22, err := tasks.DeleteRange(s22, 1, 3)
+	fmt.Println("task22:", result22, err)
+
+	//task23
+	s23 := []int{11, 22, 33, 44, 55}
+	left23 := 2
+	right23 := 4
+	values23 := []int{99, 69}
+	result23, err := tasks.ReplaceRange(s23, left23, right23, values23)
+	fmt.Println("tasks23:", result23, err)
+
+	//task24
+	s24 := []int{11, 22, 33, 44, 55}
+	values24 := []int{69, 79, 99}
+	result24, err := tasks.Splice(s24, 1, 3, values24)
+	fmt.Println("task24:", result24, err)
+
+	//task25
+	s25 := []int{11, 22, 33}
+	result25 := tasks.Clone(s25)
+	fmt.Println("task25:", result25)
+
+	//task26
+	s26 := []int{11, 22, 33, 44, 55}
+	result26, err := tasks.CloneRange(s26, 1, 3)
+	fmt.Println("task26:", result26, err)
+
+	//task27
+	a27 := []int{11, 22, 33}
+	b27 := []int{44, 55}
+	result27 := tasks.Concat(a27, b27)
+	fmt.Println("task27:", result27)
+
+	//task28
+	a28 := []int{11, 22, 33}
+	b28 := []int{44, 55}
+	c28 := []int{99, 69}
+	result28 := tasks.ConcatMany(a28, b28, c28)
+	fmt.Println("task28:", result28)
+
+	//task29
+	s29 := []int{11, 22, 11, 33, 44, 44, 44, 55, 55, 66}
+	result29 := tasks.Unique(s29)
+	fmt.Println("task29:", result29)
+
+	//task30
+	s30 := []int{11, 22, 33, 11, 33, 22, 66, 44, 44, 55}
+	result30 := tasks.UniqueInPlace(s30)
+	fmt.Println("task30:", result30)
 }
