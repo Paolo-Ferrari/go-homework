@@ -32,6 +32,7 @@ func main() {
 	fmt.Println("Task 18:", stringtasks.Join([]string{"a", "b", "c"}, "-"))
 	fmt.Println("Task 19:", stringtasks.TrimSet("...hello!!", ".!"))
 	fmt.Println("Task 20:", stringtasks.CollapseRuns("аааббв"))
+
 }
 
 func stringResult(r rune, ok bool) string {

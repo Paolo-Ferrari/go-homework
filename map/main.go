@@ -32,6 +32,20 @@ func main() {
 	fmt.Println("Task 18:", maptasks.AreAnagrams("Dormitory", "dirty room"))
 	fmt.Println("Task 19:", maptasks.WordFrequency("Go go, язык 123!"))
 	fmt.Println("Task 20:", maptasks.TopKWords("go map go string map go", 2))
+	fmt.Println("task21:", maptasks.GoupByParity([]int{1, 2, 3, 4, 5, 6}))
+	fmt.Println("task22:", maptasks.GroupByLength([]string{"Hello", "world", "hi", "123"}))
+	fmt.Println("task24:", maptasks.MapValues(
+		map[string]int{
+			"red":   1,
+			"blue":  2,
+			"green": 3,
+		},
+		func(n int) int { return n * 2 }))
+	fmt.Println("task25:", maptasks.FileterMap(map[string]int{
+		"red":   1,
+		"blue":  2,
+		"green": 3,
+	}, func(key string, value int) bool { return value > len(key) }))
 }
 
 func stringResult(r rune, ok bool) string {
